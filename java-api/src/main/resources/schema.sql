@@ -5,10 +5,3 @@ CREATE TABLE dogs (
     name VARCHAR(250) NOT NULL,
     age INT NOT NULL
 );
-
-CREATE TABLE dogs
-(
-id int,
-name varchar(25),
-age int
-);
