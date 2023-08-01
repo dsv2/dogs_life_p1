@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row'
 
 
 const AllHeroes = () => {
+
     return (
         <Row >
           {heroes.map(hero => (
@@ -29,5 +30,6 @@ const heroes = [
     {"id":10,"name":"Dick Grayson","alias":"Nightwing","superpower":"Acrobatics","teamID":5}
     ]
 
+    
 
 export default AllHeroes

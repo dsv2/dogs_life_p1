@@ -2,21 +2,39 @@ import React from 'react';
 import images from '../index';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import {useState} from "react";
+import Row from 'react-bootstrap/esm/Row';
+import Col from 'react-bootstrap/esm/Col';
 
-const HeroDetail = (props) => {
+function HeroDetail(props) {
+  const[counter, setCounter] = useState(0);
+function incrementCounter() {
+  setCounter(counter + 1);
+ }
   return (
-    <Card >
+   <>
+    <Card>
       <div className="imgContainer">
         <Card.Img variant="top" src={images[props.info.alias.replaceAll(/\s/g, '')]} width="150px" />
       </div>
-      <Card.Body >
-        <Card.Title >Alias: {props.info.alias}</Card.Title>
-        <Card.Text >Name: {props.info.name}</Card.Text>
-        <Button variant="primary">Like</Button>
+      <Card.Body>
+
+        <Card.Title>Alias: {props.info.alias}</Card.Title>
+        <Card.Text>Name: {props.info.name}</Card.Text>
+        {/* <Button variant="primary">Like</Button> */}
+    <Row>
+    <Col><Button variant="primary" onClick={incrementCounter}>Like</Button></Col>
+    <Col>{counter > 0 && <Card.Text>Likes: {counter}</Card.Text>}</Col>
+  </Row>
       </Card.Body>
+     
     </Card>
-  )
+    {/* <Button variant="primary" onClick={incrementCounter}>Like</Button>
+    <Card.Text>Likes: {counter}</Card.Text> */}
+    
+    
+  </>
+  );
 }
 
-export default HeroDetail
-
+export default HeroDetail;
