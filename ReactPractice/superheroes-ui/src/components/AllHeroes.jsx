@@ -1,7 +1,7 @@
 import React from 'react'
 import HeroDetail from './HeroDetail'
 import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+
 
 const AllHeroes = () => {
     return (

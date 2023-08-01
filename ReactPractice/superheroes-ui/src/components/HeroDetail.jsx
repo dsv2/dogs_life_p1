@@ -19,3 +19,4 @@ const HeroDetail = (props) => {
 }
 
 export default HeroDetail
+
