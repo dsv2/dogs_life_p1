@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button'
 import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form'
 import Row from 'react-bootstrap/esm/Row'
-// import { saveHero } from '../services/hero-service'
+import { saveHero } from '../services/hero-service'
 import { useNavigate } from 'react-router-dom'
 
 const HeroForm = () => {
